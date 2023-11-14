@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header>nav{
+    display: flex;
+}
+#logo{  
+    background-image: url(/recursos/logo02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    z-index: 1;
+}
+header>nav>ul{
+    height: 240px;
+    flex-grow: 1;
+    background-image: url(/recursos/banner01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    align-items: baseline;
+    gap: 10px;
+}
+header>nav>ul>li{
+    background-color: rgb(152, 56, 255);
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+header>nav>ul>li:hover{
+    background-color: rgb(198, 132, 255);
+    box-shadow: 0 0 8px 3px rgb(255, 0, 212), 0 0 2px 2px rgb(255, 255, 255);
+    transition: box-shadow .1s;
+}
+header>nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+header>h1{
+    color: rgb(41, 0, 69);
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(rgb(181, 255, 117), rgb(255, 152, 78));
+}
+
+#main-section{
+    position: relative;
+    background-image: url(/recursos/bg02.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    padding: 10px;
+}
+
+.section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: center/contain no-repeat;
+    background-color: rgba(255, 255, 255, 0.605);
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 8px 3px rgb(230, 0, 255), 0 0 2px 2px rgb(255, 255, 255);
+    box-shadow: 0 0 8px 3px rgb(0, 255, 0),0 0 2px 2px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.section-header>h2{
+    white-space: nowrap;
+}
+
+#form-header{
+    background-image: url('/recursos/banner_halloween04.png');
+    text-shadow: 0 0 4px rgb(0, 255, 153), 0 0 2px rgb(255, 255, 255), 0 0 1px rgb(255, 255, 255);
+}
+
+#table-header{
+    background-image: url('/recursos/banner_halloween02.png');
+    text-shadow: 0 0 4px rgb(102, 0, 255), 0 0 2px rgb(255, 255, 255), 0 0 1px rgb(255, 255, 255);
+}
+
+#cards-header{
+    background-image: url('/recursos/banner_halloween03.png');
+    text-shadow: 0 0 4px rgb(30, 255, 0), 0 0 2px rgb(255, 255, 255), 0 0 1px rgb(255, 255, 255);
+}
+
+.section-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 22, 95, 0.659);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 3px rgb(230, 0, 255),0 0 2px 2px rgb(255, 255, 255);
+}
+
+
+
+form{
+ background-image: url(/recursos/bg04.jpg);
+ background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 3px rgb(0, 255, 0),0 0 2px 2px rgb(255, 255, 255);
+}
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+fieldset p{
+    flex-basis: 100%;
+    text-align: center;
+}
+fieldset #span-defensa, fieldset #span-superpoder{
+    padding: 2px 20px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+.defensa-cont, .superpoder-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.defensa-cont>label, .superpoder-cont>label{
+    flex: 1;
+    width: 140px;
+    font-size: 14px;
+    padding: 2px 20px;
+    text-align: center;
+    background-color: rgba(100, 0, 143, 0.25);
+    border-radius: 5px;
+}
+.defensa-cont>label:hover{
+    box-shadow: 0 0 4px 2px rgb(136, 0, 255), 0 0 1px 1px rgb(255, 255, 255);
+    transition: box-shadow .2s;
+}
+.defensa-cont>label:active{
+    background-color: rgb(188, 116, 255);
+    transition: .4s;
+}
+.superpoder-cont>label:hover{
+    box-shadow: 0 0 4px 2px rgb(0, 255, 34), 0 0 1px 1px rgb(255, 255, 255);
+    transition: box-shadow .2s;
+}
+.superpoder-cont>label:active{
+    background-color: rgb(188, 116, 255);
+    transition: .4s;
+}
+.defensa-cont>input, .superpoder-cont>input{
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-150%, -50%);
+}
+.defensa-icon{
+    position: absolute;
+    width: 30px;
+    
+    transform: translate(-150%, -0%);
+
+}
+form>input, form select{
+    width: 160px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+form>label{
+    padding: 5px 20px;
+    min-width: 140px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.677);
+    border-radius: 5px;
+}
+form>label{
+    display: block;
+}
+.botonera{
+    display: flex;
+    gap: 10px;
+}
+button{
+    padding: 6px 30px;
+}
+#btn-icon{
+    position: absolute;
+    width: 24px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+
+
+
+#table-monstruo{
+    text-align: left;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 8px 3px rgb(0, 255, 0),0 0 2px 2px rgb(255, 255, 255);
+}
+#table-monstruo thead tr{
+    color: rgb(187, 255, 0);
+    background-color: rgba(137, 43, 226, 0.8);
+}
+#table-monstruo tbody tr{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+th{
+    padding: 8px 16px;
+}
+td{
+    padding: 4px 16px;
+}
+
+  
+
+
+
+
+
+
+#cards-section-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    width: 300px;
+    background-image: url(/recursos/bg05.jpg);
+    background-size: contain;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 3px rgb(0, 255, 0),0 0 2px 2px rgb(255, 255, 255);
+}
+.card header{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: rgba(24, 40, 94, 0.8);
+    padding: 4px 20px;
+    border-radius: 6px;
+}
+.card .cuerpo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.card-atributo, .card-superpoder{
+    background-color: rgba(10, 23, 68, 0.8);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+}
+.etiqueta, .descripcion{
+    text-align: left;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 4px 20px;
+}
+.etiqueta{
+    color: aquamarine;
+    font-weight: 700;
+}
+.descripcion{
+    color: white;
+}
+.card-superpoder{
+    background-color: rgba(223, 255, 220, 0.681);
+}
+.etiqueta-poder{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.descripcion-poder{
+    color: rgb(78, 11, 234)
+}
+.esqueleto{
+    background-image: url(/recursos/card_esqueleto.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.zombie{
+    background-image: url(/recursos/card_zombie.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.vampiro{
+    background-image: url(/recursos/card_vampiro.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.fantasma{
+    background-image: url(/recursos/card_fantasma.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.bruja{
+    background-image: url(/recursos/card_bruja.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+.hombre-lobo{
+    background-image: url(/recursos/card_hombre_lobo.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: darkcyan;
+}
+footer>ul{
+    background-color: rgb(229, 199, 161);
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    justify-content: end;
+}
+footer>ul>li{
+    margin-right: 25px;
+}
+footer>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+footer>p{
+    padding: 0 25px;
+    background-color: rgb(48, 226, 226);
+    text-align: center;
+}
+
+
+.hidden{
+    position: absolute;
+    visibility: hidden;
+}
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+.spinner {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url("/recursos/spinner.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    header>nav>ul{
+        flex-direction: column;
+        align-items: end;
+    }
+    header>nav>ul>li{
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo{
+        visibility: hidden;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    footer>ul{
+        justify-content: space-around;
+    }
+    footer>ul>li{
+        margin-right: 0;
+    }
+}

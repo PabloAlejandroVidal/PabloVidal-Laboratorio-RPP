@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <title>Laboratorio III - Vidal Pablo</title>
+</head>
+<body>    
+    <div id="overlay" class="overlay">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <nav>
+        <div id="logo"></div>
+        <ul>
+            <li id="li-home"><a href="#">Home</a></li>
+            <li id="li-monstruo"><a href="#">Monstruos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>CRUD Monstruos</h1>
+</header>
+
+    <main id="main-section">
+        <section class="section-cont" id="form-section">
+                <div class="section-header" id="form-header">
+                    <h2>Información del Monstruo</h2>
+                </div>
+                <form id="form">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" autocomplete="off" placeholder="Ingrese nombre" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                    
+                    <label for="alias">Alias</label>
+                    <input id="alias" type="text" autocomplete="off" placeholder="Ingrese alias" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                    
+                    
+                    <fieldset>
+                        <p>
+                            <span id="span-defensa">Defensa</span>
+                        </p>
+                        <div class="defensa-cont">
+                            <img class="defensa-icon" id="pocion-icon" src="recursos/pocion-icon.png" alt="">
+                            <label for="pocion">Pocion</label>
+                            <input type="radio" id="pocion" name="defensa" value="pocion" checked>
+                        </div>
+                        <div class="defensa-cont">
+                            <img class="defensa-icon" id="crucifijo-icon" src="recursos/crucifijo-icon.png" alt="">
+                            <label for="crucifijo">Crucifijo</label>
+                            <input type="radio" id="crucifijo" name="defensa" value="crucifijo" checked>
+                        </div>
+                        <div class="defensa-cont">
+                            <img class="defensa-icon" id="estaca-icon" src="recursos/estaca-icon.png" alt="">
+                            <label for="estaca">Estaca</label>
+                            <input type="radio" id="estaca" name="defensa" value="estaca" checked>
+                        </div>
+                        <div class="defensa-cont">
+                            <img class="defensa-icon" id="plata-icon" src="recursos/plata-icon.png" alt="">
+                            <label for="plata">Plata</label>
+                            <input type="radio" id="plata" name="defensa" value="plata" checked>
+                        </div>
+                    </fieldset>
+                
+                    <label for="miedo">Miedo</label>
+                    <input id="miedo" type="range" min="1" max="100" value="50">
+                    
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" id="tipo">
+                        <option value="esqueleto">Esqueleto</option>
+                        <option value="zombie">Zombie</option>
+                        <option value="vampiro">Vampiro</option>
+                        <option value="fantasma">Fantasma</option>
+                        <option value="bruja">Bruja</option>
+                        <option value="hombre-lobo">Hombre Lobo</option>
+                    </select>
+
+                    <fieldset>
+                        <p>
+                            <span id="span-superpoder">Superpoderes</span>
+                        </p>
+                        <div class="superpoder-cont">
+                            <label for="volador">Volador</label>
+                            <input type="checkbox" id="volador" name="superpoder">
+                        </div>
+                        <div class="superpoder-cont">
+                            <label for="inmortalidad">Inmortalidad</label>
+                            <input type="checkbox" id="inmortalidad" name="superpoder">
+                        </div>
+                        <div class="superpoder-cont">
+                            <label for="invisibilidad">Invisibilidad</label>
+                            <input type="checkbox" id="invisibilidad" name="superpoder">
+                        </div>
+                        <div class="superpoder-cont">
+                            <label for="supervelocidad">Supervelocidad</label>
+                            <input type="checkbox" id="supervelocidad" name="superpoder">
+                        </div>
+                    </fieldset>
+
+                    <input type="hidden" id="id" name="id" value="0">
+                    <div class="botonera">
+                        <img id="btn-icon" src="recursos/guardar_icon.png" alt="">
+                        <button id="btn-agregar">Agregar</button>
+                        <button id="btn-guardar">Actualizar</button>
+                        <button id="btn-eliminar">Eliminar</button>
+                        <button id="btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+        </section>
+
+
+        <section class="section-cont" id="table-section">
+            <div class="section-header" id="table-header">
+                <h2>Tabla de Monstruos</h2>
+            </div>
+            <table id="table-monstruo">
+                <thead id="thead-monstruo">
+                    <tr class="tr-monstruo">
+                        <th>Nombre</th>
+                        <th>Alias</th>
+                        <th>Defensa</th>
+                        <th>Miedo</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-monstruo">
+                </tbody>
+                
+            </table>
+        </section>
+
+        
+        <section class="section-cont" id="cards-section">
+            <div class="section-header" id="cards-header">
+                <h2>Cards de Monstruos</h2>
+            </div>
+            <div id="cards-section-body">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Monstruos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p>Laboratorio III - Todos los Derechos Reservados 2020 &copy;</p>
+    </footer>
+</body>
+</html>
