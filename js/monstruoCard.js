@@ -60,7 +60,7 @@ export function crearCards(monstruos) {
                     const dd = document.createElement("dd");
                     dd.classList.add("descripcion");
                     dd.classList.add("descripcion-poder");
-                    dd.textContent = m.poderes[poder];
+                    dd.textContent = m[poder] ? "Si" : "No";
 
                     divAtributo.appendChild(dt);
                     divAtributo.appendChild(dd);
