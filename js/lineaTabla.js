@@ -26,5 +26,16 @@ export function crearLinea (monstruo) {
         }
     });
 
+    let superpoderes = 0;
+    for (const poder in monstruo.poderes) {
+        if (monstruo.poderes.hasOwnProperty(poder)) {
+            superpoderes++;   
+        }
+    }
+    const cell = document.createElement("td");
+    cell.classList.add("poderes");
+    cell.textContent = superpoderes;
+    newRow.appendChild(cell);
+
     return newRow;
 };
