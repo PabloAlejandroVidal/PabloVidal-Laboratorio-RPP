@@ -29,7 +29,9 @@ export function crearLinea (monstruo) {
     let superpoderes = 0;
     for (const poder in monstruo.poderes) {
         if (monstruo.poderes.hasOwnProperty(poder)) {
-            superpoderes++;   
+            if(monstruo.poderes[poder]){
+                superpoderes++;   
+            }
         }
     }
     const cell = document.createElement("td");

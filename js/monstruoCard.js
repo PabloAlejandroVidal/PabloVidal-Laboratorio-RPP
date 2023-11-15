@@ -44,7 +44,6 @@ export function crearCards(monstruos) {
         article.appendChild(listaDescriptiva);
 
         if (m.poderes && Object.keys(m.poderes).length > 0) {
-            const div = document.createElement("div");
         
             for (const poder in m.poderes) {
                 if (m.poderes.hasOwnProperty(poder)) {
@@ -60,7 +59,8 @@ export function crearCards(monstruos) {
                     const dd = document.createElement("dd");
                     dd.classList.add("descripcion");
                     dd.classList.add("descripcion-poder");
-                    dd.textContent = m[poder] ? "Si" : "No";
+                    console.log(m.poderes[poder]);
+                    dd.textContent = m.poderes[poder] ? "Si" : "No";
 
                     divAtributo.appendChild(dt);
                     divAtributo.appendChild(dd);
